@@ -118,6 +118,8 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    meta-tags (2.22.1)
+      actionpack (>= 6.0.0, < 8.1)
     mini_mime (1.1.5)
     minitest (5.25.4)
     msgpack (1.7.5)
@@ -291,6 +293,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  meta-tags
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.2)
