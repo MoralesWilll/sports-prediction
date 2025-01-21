@@ -1,0 +1,32 @@
+<div class="home-banner">
+  <header class="header">
+    <h1>Welcome to Our <span>Sports Prediction</span></h1>
+  </header>
+  <video autoplay loop muted class="banner-video">
+    <source src="/Blue Modern Sport Channel Video.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+  <div class="banner-content">
+    <h1>Bienvenido a Nuestro Sitio</h1>
+    <p>Descubre lo mejor que tenemos para ofrecerte.</p>
+  </div>
+</div>
+
+<div class="sports-predictions">
+
+<section class="upcoming-matches">
+  <h2>Próximos partidos...</h2>
+  <div class="match-list">
+    <% @matches.each do |match| %>
+      <div class="match-card">
+        <div class="match-info">
+          <div class="match-match">
+            <p><strong><%= match[:team1] %> vs <%= match[:team2] %></strong></p>
+          </div>
+          <p><%= match[:match_date].strftime('%B %d, %Y') %> | <%= match[:time] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+</div>
