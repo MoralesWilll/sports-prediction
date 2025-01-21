@@ -1,15 +1,96 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.home-banner {
+    position: relative;
+    width: 100%;
+    /* Ancho completo del contenedor */
+    height: 400px;
+    /* Altura específica del contenedor */
+    overflow: hidden;
+}
+
+.banner-video {
+    position: absolute;
+    top: -130px;
+    left: 0;
+    width: 100%;
+    /* Asegura que el video ocupe toda la altura del contenedor */
+    object-fit: contain;
+    /* Ajusta el video sin distorsionarlo */
+    z-index: -1;
+    /* Coloca el video detrás del contenido */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    /* Asegura que el contenido esté por encima del video */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.sports-predictions {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+.header {
+    background: linear-gradient(90deg, #00336673, #0099cc71);
+    color: white;
+    padding: 20px 0;
+}
+
+.header h1 span {
+    color: #00ffccc5;
+}
+
+.upcoming-matches h2 {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #003366;
+}
+
+.match-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.match-card {
+    background: #9C9C9C;
+    border-radius: 10px;
+    border-radius: 50px;
+    width: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.match-info {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.match-info p {
+    font-size: 1.1em;
+}
+
+.match-info strong {
+    color: #003366;
+}
+
+.match-match strong {
+    display: flex;
+    width: 400px;
+    color: white;
+    background-color: #034366;
+    border-radius: 50px;
+    padding: 15px;
+    padding-left: 100px;
+}
+
+.match-match p strong {
+    padding-left: 70px;
+}
