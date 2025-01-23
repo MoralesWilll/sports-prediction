@@ -1,0 +1,374 @@
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (308.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4864462386606107145)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (318.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (312.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to DeviseCreateUsers (20250123073747)
+  [1m[36mTRANSACTION (315.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (331.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (302.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (304.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4864462386606107145)[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (310.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4864462386606107145)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (308.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (304.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to DeviseCreateUsers (20250123073747)
+  [1m[36mTRANSACTION (307.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (313.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (306.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (306.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (308.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250123073747') RETURNING "version"[0m
+  [1m[36mTRANSACTION (305.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRoleToUsers (20250123073938)
+  [1m[36mTRANSACTION (301.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (309.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying DEFAULT 'user'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (303.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250123073938') RETURNING "version"[0m
+  [1m[36mTRANSACTION (308.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (302.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4864462386606107145)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (304.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (320.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Exists? (638.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (319.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (643.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "[FILTERED]"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2025-01-23 07:47:17.681350"], ["updated_at", "2025-01-23 07:47:17.681350"], ["role", "admin"]]
+  [1m[36mTRANSACTION (320.4ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/" for 127.0.0.1 at 2025-01-23 02:48:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (305.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant HomeController)
+NameError (uninitialized constant HomeController)
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-01-23 02:48:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDATABASE_HOST[0m, [36mDATABASE_NAME[0m, [36mDATABASE_PASSWORD[0m, [36mDATABASE_PORT[0m, [36mDATABASE_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 095c-181-58-39-27.ngrok-free.app, 095c-181-58-39-27.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 095c-181-58-39-27.ngrok-free.app, 095c-181-58-39-27.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 095c-181-58-39-27.ngrok-free.app, 095c-181-58-39-27.ngrok-free.app
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 095c-181-58-39-27.ngrok-free.app, 095c-181-58-39-27.ngrok-free.app
+Started GET "/" for ::1 at 2025-01-23 02:52:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (299.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 22.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2610.8ms | GC: 0.2ms)
+Completed 200 OK in 3079ms (Views: 2671.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:52:54 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:52:56 -0500
+Processing by Devise::SessionsController#new as HTML
+Started GET "/users/sign_up" for ::1 at 2025-01-23 02:52:56 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 138.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 169.0ms | GC: 0.0ms)
+Completed 200 OK in 6529ms (Views: 184.0ms | ActiveRecord: 4172.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:53:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:53:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 110.7ms | GC: 0.0ms)
+Completed 200 OK in 117ms (Views: 111.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | GC: 0.0ms)
+Completed 200 OK in 9388ms (Views: 46.9ms | ActiveRecord: 2417.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2025-01-23 02:53:14 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | GC: 0.0ms)
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2025-01-23 02:53:16 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:53:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 36.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:53:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 64.2ms | GC: 0.0ms)
+Started GET "/users/sign_up" for ::1 at 2025-01-23 02:53:25 -0500
+  Rendered layout layouts/application.html.erb (Duration: 190.9ms | GC: 0.0ms)
+Completed 200 OK in 199ms (Views: 194.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2025-01-23 02:54:03 -0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (301.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 1596ms (ActiveRecord: 906.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-23 02:54:05 -0500
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (299.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 618.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 666.7ms | GC: 0.0ms)
+Completed 200 OK in 672ms (Views: 367.6ms | ActiveRecord: 299.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2025-01-23 02:54:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2025-01-23 02:55:17 -0500
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (302.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 2439.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2529.9ms | GC: 0.0ms)
+Completed 200 OK in 2552ms (Views: 119.1ms | ActiveRecord: 2424.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:55:23 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_out" for ::1 at 2025-01-23 02:55:26 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2025-01-23 02:55:26 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (304.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 310.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 341.3ms | GC: 0.2ms)
+Completed 200 OK in 347ms (Views: 38.1ms | ActiveRecord: 304.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:55:26 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-23 02:55:46 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (302.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 312.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 346.9ms | GC: 0.0ms)
+Completed 200 OK in 352ms (Views: 45.6ms | ActiveRecord: 302.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:55:47 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_out" for ::1 at 2025-01-23 02:55:49 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2025-01-23 02:55:49 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (305.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 313.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 346.8ms | GC: 0.0ms)
+Completed 200 OK in 351ms (Views: 42.2ms | ActiveRecord: 305.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:55:49 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_out" for ::1 at 2025-01-23 02:55:54 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2025-01-23 02:55:55 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (298.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 306.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 415.9ms | GC: 0.0ms)
+Completed 200 OK in 424ms (Views: 118.5ms | ActiveRecord: 298.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:55:56 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-23 02:56:29 -0500
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (299.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 2131.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2231.0ms | GC: 0.0ms)
+Completed 200 OK in 2251ms (Views: 125.8ms | ActiveRecord: 2118.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-23 02:56:35 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2025-01-23 02:56:39 -0500
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (303.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 395ms (ActiveRecord: 303.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-23 02:56:39 -0500
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-01-23 02:56:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
