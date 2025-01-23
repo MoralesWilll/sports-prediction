@@ -2,14 +2,14 @@
     position: relative;
     width: 100%;
     /* Ancho completo del contenedor */
-    height: 400px;
+    height: 450px;
     /* Altura específica del contenedor */
     overflow: hidden;
 }
 
 .banner-video {
     position: absolute;
-    top: -130px;
+    top: -125px;
     left: 0;
     width: 100%;
     /* Asegura que el video ocupe toda la altura del contenedor */

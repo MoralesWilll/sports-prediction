@@ -1,0 +1,205 @@
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:38:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 324.2ms | GC: 88.6ms)
+Completed 200 OK in 353ms (Views: 328.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 90.5ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:38:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:38:34 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:38:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:38:35 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.5ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:38:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:38:36 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.5ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:38:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:45 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:47 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 07:39:47 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 3.6ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/Blue%20Modern%20Sport%20Channel%20Video.mp4" for 127.0.0.1 at 2025-01-23 07:39:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Blue%20Modern%20Sport%20Channel%20Video.mp4"):
+  
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:24:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 108.9ms | GC: 36.3ms)
+Completed 200 OK in 126ms (Views: 113.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 36.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:24:46 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:25:22 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | GC: 32.2ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 32.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:25:41 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:25:48 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:25:55 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | GC: 34.3ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:26:04 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | GC: 39.0ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 44.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-01-23 08:26:16 -0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 1.5ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.5ms)
+
+
