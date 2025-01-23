@@ -22,6 +22,10 @@ gem "jbuilder"
 gem "dotenv-rails"
 # Use devise for authentication
 gem "devise"
+# Use omniauth for authentication
+gem "omniauth"
+gem "omniauth-rails_csrf_protection"
+gem "omniauth-google-oauth2"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

@@ -23,4 +23,9 @@
   </div>
 <% end %>
 
+<%= form_tag(user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+  <button type="submit">Login with Google</button>
+<% end %>
+
+
 <%= render "devise/shared/links" %>
