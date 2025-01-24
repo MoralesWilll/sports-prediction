@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :omniauthable, omniauth_providers: [:google_oauth2, :github]
 
   # app/models/user.rb
 
@@ -14,9 +14,10 @@ class User < ApplicationRecord
 
     # Uncomment the section below if you want users to be created if they don't exist
     unless user
-        user = User.create(name: data['name'],
-           email: data['email'],
-           password: Devise.friendly_token[0,20]
+        user = User.create(
+          name: data['name'],
+          email: data['email'],
+          password: Devise.friendly_token[0,20]
         )
     end
     user
