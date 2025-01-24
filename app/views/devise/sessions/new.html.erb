@@ -27,5 +27,9 @@
   <button type="submit">Login with Google</button>
 <% end %>
 
+<%= form_tag(user_github_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+  <button type="submit">Login with GitHub</button>
+<% end %>
+
 
 <%= render "devise/shared/links" %>
