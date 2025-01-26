@@ -7,7 +7,7 @@ class OpenService
   def ask
     response = @client.chat(
       parameters: {
-        model: "gpt-4",
+        model: "gpt-4-turbo",
         messages: [ { role: "user", content: @prompt } ],
         temperature: 0.7,
         max_tokens: 200

@@ -10,6 +10,9 @@ window.Stimulus   = application
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("message-form");
     const input = document.getElementById("message-input");
+    const openChatButton = document.getElementById("open-chat");
+    const closeChatButton = document.getElementById("close-chat");
+    const chatModal = document.getElementById("chat-modal");
 
     if (form && input) {
       form.addEventListener("submit", (event) => {
@@ -22,7 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
+    // Show chat modal
+    openChatButton.addEventListener("click", () => {
+      chatModal.classList.remove("hidden");
+    });
+
+    // Hide chat modal
+    closeChatButton.addEventListener("click", () => {
+      chatModal.classList.add("hidden");
+    });
+
+    // Close modal when clicking outside of the chat box
+    chatModal.addEventListener("click", (e) => {
+      if (e.target === chatModal) {
+        chatModal.classList.add("hidden");
+      }
+    });
   });
+
+
 
 
 export { application }
