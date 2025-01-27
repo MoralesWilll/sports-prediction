@@ -28,9 +28,16 @@ gem "omniauth-rails_csrf_protection"
 gem "omniauth-google-oauth2"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
-gem "meta-tags"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
+
+# SEO gems
+# meta tags fot meta data in websites and robots followoing
+gem "meta-tags"
+# frindly id for better URLs
+gem "friendly_id", "~> 5.4.0"
+# sitemap for mapping the entire web site
+gem "sitemap_generator", "~> 6.1"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -44,7 +51,6 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem "dotenv-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
