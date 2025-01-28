@@ -1,35 +1,130 @@
-<h2>Log in</h2>
+<div class="min-h-screen flex items-center justify-center w-full bg-cover bg-center bg-[url('https://static.vecteezy.com/system/resources/previews/038/804/315/large_2x/ai-generated-a-soccer-field-on-a-dark-background-free-photo.jpg')]">
+  <div data-controller="modal">
+    <!-- Login Card -->
+    <div class="w-[400px] max-w-[400px] bg-white/20 backdrop-blur-lg shadow-2xl rounded-2xl p-8 hover:bg-white/30 hover:backdrop-blur-xl transition-all duration-300 border border-white/10">
+      <h2 class="text-4xl font-bold font-lobster text-center text-white mb-6 drop-shadow-md">Welcome to <br/> Sports Predictions!</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+        <!-- Email Input -->
+        <div class="space-y-2">
+          <%= f.label :email, "Email", class: "block text-sm font-medium text-white/80" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", 
+              class: "block w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+        <!-- Password Input -->
+        <div class="space-y-2">
+          <%= f.label :password, "Password", class: "block text-sm font-medium text-white/80" %>
+          <%= f.password_field :password, autocomplete: "current-password", 
+              class: "block w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" %>
+        </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <!-- Remember Me Checkbox -->
+        <% if devise_mapping.rememberable? %>
+          <div class="flex items-center">
+            <%= f.check_box :remember_me, class: "h-5 w-5 text-blue-400 bg-white/10 border-white/20 rounded focus:ring-blue-400" %>
+            <%= f.label :remember_me, "Remember me", class: "ml-2 block text-sm text-white/80" %>
+          </div>
+        <% end %>
+
+        <!-- Log In Button -->
+        <div>
+          <%= f.submit "Log In", 
+              class: "w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 transform hover:scale-[1.02] active:scale-95" %>
+        </div>
+      <% end %>
+
+      <!-- Social Login Buttons -->
+      <div class="mt-6 space-y-4">
+        <%= form_tag(user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+          <button type="submit" class="w-full px-4 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-200 flex items-center justify-center gap-3">
+            <img src="<%= asset_path('logos/google.svg') %>" alt="Google Logo" class="w-6 h-6" />
+            <span>Log in with Google</span>
+          </button>
+        <% end %>
+
+        <%= form_tag(user_github_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+          <button type="submit" class="w-full px-4 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 transition-all duration-200 flex items-center justify-center gap-3">
+            <img src="<%= asset_path('logos/github.svg') %>" alt="GitHub Logo" class="w-6 h-6" />
+            <span>Log in with GitHub</span>
+          </button>
+        <% end %>
+      </div>
+
+      <!-- Sign-Up Link -->
+      <div class="mt-6 text-center">
+        <%= link_to "Don't have an account? Sign up", "#", 
+            data: { action: "click->modal#open" }, 
+            class: "text-blue-500 font-semibold hover:text-blue-400 underline underline-offset-4 transition-colors duration-200" %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <!-- Sign-Up Modal -->
+    <div id="signUpModal" 
+        data-modal-target="modal"
+        class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+      <div class="w-[400px] max-w-[400px] bg-white/20 backdrop-blur-xl shadow-2xl rounded-2xl p-8 transform -translate-y-4 transition-all duration-300 ease-out border border-white/10 hover:bg-white/30 hover:backdrop-blur-2xl">
+        <h2 class="text-3xl font-bold text-center text-white mb-6 drop-shadow-md">Sign Up</h2>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), 
+            html: { 
+              id: "new_user_#{resource_name}", 
+              class: "space-y-4",
+              data: { controller: "password-validation" }
+            }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <!-- Email Input -->
+          <div class="space-y-2">
+            <%= f.label :email, "Email", class: "block text-sm font-semibold text-white/80" %>
+            <%= f.email_field :email, id: "user_email_#{resource_name}", autofocus: true, autocomplete: "email", 
+                class: "block w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" %>
+          </div>
+
+          <!-- Password Input -->
+          <div class="space-y-2">
+            <%= f.label :password, "Password", class: "block text-sm font-semibold text-white/80" %>
+            <% if @minimum_password_length %>
+              <em class="text-sm text-white/60">(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+            <%= f.password_field :password, 
+                id: "user_password_#{resource_name}", 
+                autocomplete: "new-password",
+                data: { 
+                  password_validation_target: "password",
+                  action: "input->password-validation#validatePasswords"
+                },
+                class: "block w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200 mt-1" %>
+          </div>
+
+          <!-- Confirm Password Input -->
+          <div class="space-y-2">
+            <%= f.label :password_confirmation, "Confirm Password", class: "block text-sm font-semibold text-white/80" %>
+            <%= f.password_field :password_confirmation, 
+                autocomplete: "new-password",
+                data: { 
+                  password_validation_target: "confirmation",
+                  action: "input->password-validation#validatePasswords"
+                },
+                class: "block w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" %>
+            <p data-password-validation-target="error" class="text-red-400 text-sm mt-1"></p>
+          </div>
+
+          <!-- Sign Up Button -->
+          <div class="pt-4">
+            <%= f.submit "Sign up", 
+                data: { password_validation_target: "submit" },
+                class: "w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 transform hover:scale-[1.02] active:scale-95" %>
+          </div>
+        <% end %>
+
+        <!-- Close Modal Button -->
+        <div class="text-center mt-6">
+          <%= link_to "Close", "#", 
+              data: { action: "click->modal#close" }, 
+              class: "text-red-400 hover:text-red-300 focus:outline-none font-semibold px-4 py-2 rounded-lg hover:bg-red-50/10 transition-colors duration-200" %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= form_tag(user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
-  <button type="submit">Login with Google</button>
-<% end %>
-
-<%= form_tag(user_github_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
-  <button type="submit">Login with GitHub</button>
-<% end %>
-
-
-<%= render "devise/shared/links" %>
+</div>
