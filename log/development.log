@@ -5145,3 +5145,138 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 10354ms (Views: 1470.3ms | ActiveRecord: 4503.3ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:00:55 -0500
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:00:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (312.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 46.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | GC: 0.0ms)
+Completed 200 OK in 6587ms (Views: 118.6ms | ActiveRecord: 4154.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 47.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | GC: 0.0ms)
+Completed 200 OK in 9947ms (Views: 70.2ms | ActiveRecord: 2413.7ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:03:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (315.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 43.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | GC: 0.0ms)
+Completed 200 OK in 7799ms (Views: 118.8ms | ActiveRecord: 4597.7ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:05:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (299.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | GC: 0.0ms)
+Completed 200 OK in 6937ms (Views: 105.1ms | ActiveRecord: 4457.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:06:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (335.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | GC: 0.0ms)
+Completed 200 OK in 6934ms (Views: 112.7ms | ActiveRecord: 4420.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 06:09:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (300.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | GC: 0.0ms)
+Completed 200 OK in 6885ms (Views: 105.2ms | ActiveRecord: 4407.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
