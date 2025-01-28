@@ -10,7 +10,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        quicksand: ['"Quicksand"', 'sans-serif'],
+        lobster: ['"Lobster"', 'sans-serif'],
+      },
+      colors: {
+        'main-blue': '#001f54',
+        'main-white': '#ffffff',
       },
     },
   },
