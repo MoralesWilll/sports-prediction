@@ -5120,3 +5120,28 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 6561ms (Views: 110.2ms | ActiveRecord: 4179.9ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/sign_in" for ::1 at 2025-01-28 05:56:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (325.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.6ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1014.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1173.2ms | GC: 0.0ms)
+Completed 200 OK in 10354ms (Views: 1470.3ms | ActiveRecord: 4503.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
