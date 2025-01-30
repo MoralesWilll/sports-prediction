@@ -8708,3 +8708,73 @@ Processing by Rails::PwaController#manifest as JSON
 Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_PORT[0m, [36mDB_USERNAME[0m, [36mGITHUB_CLIENT_ID[0m, [36mGITHUB_CLIENT_SECRET[0m, [36mGMAIL_APP_PASSWORD[0m, [36mGMAIL_USERNAME[0m, [36mGOOGLE_CLIENT_ID[0m, and [36mGOOGLE_CLIENT_SECRET[0m
+[dotenv] Loaded [33m.env[0m
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2025-01-30 06:55:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (305.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 264.7ms | GC: 0.0ms)
+  Rendered layouts/_flash.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 293.7ms | GC: 0.0ms)
+Completed 200 OK in 8627ms (Views: 434.8ms | ActiveRecord: 4662.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2025-01-30 06:57:54 -0500
+DEPRECATION WARNING: Defining enums with keyword arguments is deprecated and will be removed
+in Rails 8.0. Positional arguments should be used instead:
+
+enum :role, {:user=>0, :admin=>1}
+ (called from <class:User> at C:/Users/Personal/Documents/Riwi/Programming/sports-prediction/app/models/user.rb:2)
+Processing by Users::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered shared/_form_input.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_form_input.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 30.5ms | GC: 0.0ms)
+  Rendered layouts/_flash.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | GC: 0.0ms)
+Completed 200 OK in 29109ms (Views: 68.7ms | ActiveRecord: 31642.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/manifest.json" for ::1 at 2025-01-30 06:58:27 -0500
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/users/password" for ::1 at 2025-01-30 06:59:26 -0500
+Processing by Users::PasswordsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (326.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (326.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (661.9ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "reset_password_token" = $2, "reset_password_sent_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["updated_at", "2025-01-30 11:59:29.168043"], ["id", 1]]
+  [1m[36mTRANSACTION (325.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 3200ms (ActiveRecord: 2294.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-30 06:59:30 -0500
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (329.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 661.0ms | GC: 0.0ms)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 664.5ms | GC: 0.0ms)
+Completed 200 OK in 709ms (Views: 344.4ms | ActiveRecord: 329.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
