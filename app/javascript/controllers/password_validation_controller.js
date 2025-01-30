@@ -2,32 +2,15 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["password", "confirmation", "submit", "error"]
+  static targets = ["password", "passwordConfirmation", "errorMessage"]
 
-  connect() {
-    this.submitTarget.disabled = true
-  }
-
-  validatePasswords() {
-    const password = this.passwordTarget.value
-    const confirmation = this.confirmationTarget.value
-    
-    if (password === "" || confirmation === "") {
-      this.submitTarget.disabled = true
-      this.errorTarget.textContent = ""
-      return
-    }
-
-    if (password === confirmation) {
-      this.submitTarget.disabled = false
-      this.errorTarget.textContent = ""
-      this.confirmationTarget.classList.remove("border-red-500")
-      this.confirmationTarget.classList.add("border-green-500")
+  validate() {
+    if (this.passwordTarget.value !== this.passwordConfirmationTarget.value) {
+      this.errorMessageTarget.textContent = "Passwords do not match";
+      this.errorMessageTarget.classList.remove("hidden");
     } else {
-      this.submitTarget.disabled = true
-      this.errorTarget.textContent = "Passwords don't match"
-      this.confirmationTarget.classList.remove("border-green-500")
-      this.confirmationTarget.classList.add("border-red-500")
+      this.errorMessageTarget.textContent = "";
+      this.errorMessageTarget.classList.add("hidden");
     }
   }
 }

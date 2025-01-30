@@ -1,0 +1,15 @@
+<div class="mt-6 space-y-4">
+  <%= form_tag(user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+    <button type="submit" class="w-full px-4 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-200 flex items-center justify-center gap-3">
+      <img src="<%= asset_path('logos/google.svg') %>" alt="Google Logo" class="w-6 h-6" />
+      <span>Log in with Google</span>
+    </button>
+  <% end %>
+
+  <%= form_tag(user_github_omniauth_authorize_path, method: :post, data: { turbo: false }) do %>
+    <button type="submit" class="w-full px-4 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 transition-all duration-200 flex items-center justify-center gap-3">
+      <img src="<%= asset_path('logos/github.svg') %>" alt="GitHub Logo" class="w-6 h-6" />
+      <span>Log in with GitHub</span>
+    </button>
+  <% end %>
+</div>
