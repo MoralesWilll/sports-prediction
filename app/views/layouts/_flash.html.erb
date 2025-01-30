@@ -1,0 +1,9 @@
+<% flash.each do |key, message| %>
+  <div id="flash-<%= key %>" 
+       class="fixed z-50 bottom-4 right-4 p-4 bg-white/20 backdrop-blur-lg rounded-lg shadow-lg border border-white/10 text-white transform transition-transform duration-300 translate-y-0" 
+       data-controller="flash" 
+       data-action="click->flash#close">
+    <%= message %>
+    <button class="ml-4 text-white hover:text-gray-200 focus:outline-none" data-action="flash#close">&times;</button>
+  </div>
+<% end %>
