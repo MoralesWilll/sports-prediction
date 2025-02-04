@@ -1,6 +1,6 @@
 <button
   id="open-chat"
-  class="absolute right-3 bottom-4 py-3 px-4 gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+  class="fixed right-3 bottom-20 py-3 px-4 gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
 >
   Predictions Chat
 </button>
@@ -8,9 +8,9 @@
 <!-- Chat Modal -->
 <div
   id="chat-modal"
-  class="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center hidden z-50"
+  class="fixed flex inset-0 bg-gray-500 bg-opacity-50 items-center justify-center hidden z-50"
 >
-  <div class="flex flex-col h-[80vh] w-[90vw] md:w-[50vw] bg-gray-500 border-1.5 shadow-lg border-black rounded-lg">
+  <div class="flex flex-col h-[80vh] w-[90vw] md:w-[50vw] bg-gray-500 border-[1.5px] shadow-lg border-black rounded-lg">
     <header class="flex justify-center relative bg-blue-400 text-white text-center py-4 shadow-md">
       <h1 class="text-xl absolute font-semibold">Chat Room</h1>
       <button

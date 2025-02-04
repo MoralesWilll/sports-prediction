@@ -1,0 +1,22 @@
+<div class="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center">
+  <!-- Team 1 Logo -->
+  <div class="flex-shrink-0">
+    <img src="<%= image_path(match[:team1_logo]) %>" alt="<%= match[:team1_name] %>" class="w-16 h-16 object-contain">
+  </div>
+
+  <!-- Match Details -->
+  <div class="ml-4 w-[300px] text-center">
+    <h3 class="font-semibold"><%= match[:team1_name] %> vs <%= match[:team2_name] %></h3>
+    <p class="text-sm text-gray-600"><%= match[:datetime] %></p>
+  </div>
+
+  <!-- Team 2 Logo -->
+  <div class="flex-shrink-0 ml-4">
+    <img src="<%= image_path(match[:team2_logo]) %>" alt="<%= match[:team2_name] %>" class="w-16 h-16 object-contain">
+  </div>
+
+  <!-- Stadium Info -->
+  <div class="text-right ml-auto">
+    <span class="text-sm"><strong class="font-bold">Stadium:</strong> <%= match[:stadium] %></span>
+  </div>
+</div>
