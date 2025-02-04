@@ -1,0 +1,41 @@
+<div class="min-h-screen flex items-center justify-center w-full bg-cover bg-center" style="background-image: url('<%= asset_path('backgrounds/sign-in-bg.jpg') %>');">
+  <div data-controller="modal" class="relative">
+    <!-- Login Card -->
+    <div class="w-[400px] max-w-[400px] bg-white/20 backdrop-blur-lg shadow-2xl rounded-2xl p-8 hover:bg-white/30 hover:backdrop-blur-xl transition-all duration-300 border border-white/10">
+      <h2 class="text-4xl font-bold font-lobster text-center text-white mb-6 drop-shadow-md [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
+        Welcome to <br/> Sports Predictions!
+      </h2>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+        <%= render "shared/form_input", f: f, field: :email, label: "Email", field_type: :email_field, options: { autofocus: true, autocomplete: "email" } %>
+        <%= render "shared/form_input", f: f, field: :password, label: "Password", field_type: :password_field, options: { autocomplete: "current-password" } %>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="flex items-center">
+            <%= f.check_box :remember_me, class: "h-5 w-5 text-blue-400 bg-white/10 border-white/20 rounded focus:ring-blue-400" %>
+            <%= f.label :remember_me, "Remember me", class: "ml-2 block text-sm text-white/80" %>
+          </div>
+        <% end %>
+
+        <div>
+          <%= f.submit "Log In", class: button_class(:primary) %>
+        </div>
+      <% end %>
+
+      <%= render "shared/social_login_buttons" %>
+
+      <div class="mt-6 text-center space-y-2">
+        <%= link_to "Don't have an account? Sign up", "#", 
+            data: { action: "click->modal#open" }, 
+            class: "text-blue-600 font-semibold hover:text-blue-700 underline underline-offset-4 transition-colors duration-200 block" %>
+
+        <%= link_to "Forgot your password?", "#", 
+            data: { action: "click->modal#openForgotPassword" }, 
+            class: "text-blue-600 font-semibold hover:text-blue-700 underline underline-offset-4 transition-colors duration-200 block" %>
+      </div>
+    </div>
+
+    <%= render "shared/sign_up_modal" %>
+    <%= render "shared/forgot_password_modal" %>
+  </div>
+</div>

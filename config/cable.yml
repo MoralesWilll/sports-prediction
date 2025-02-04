@@ -1,5 +1,6 @@
 development:
   adapter: async
+  log_level: debug
 
 test:
   adapter: test
